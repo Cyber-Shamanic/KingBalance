@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#091a31">
+  <meta name="description" content="KingBalance — מאגר ליקוטים, עשה טוב וסור מרע, עם מפת 15 פרקי הספר ואפיון עצמאי למהדורה 6.">
+  <title>KingBalance — דרך המלך | מאגר סור מרע ועשה טוב</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#reader">דלג לתוכן</a>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="ניווט במסמכים">
+      <div class="sidebar-head">
+        <a href="#/intro" class="brand" aria-label="KingBalance — עמוד ראשי">
+          <span class="brand-mark" aria-hidden="true">♛</span>
+          <span><strong>KingBalance</strong><small>King + Balance · KB</small></span>
+        </a>
+        <button class="icon-button sidebar-close" id="close-sidebar" aria-label="סגור תפריט">✕</button>
+      </div>
+      <button type="button" id="version-sidebar" class="version-chip" aria-haspopup="dialog" aria-controls="version-modal">
+        <span class="version-dot"></span> גרסה 0.0.1 <span aria-hidden="true">↗</span>
+      </button>
+      <div class="search-wrap">
+        <label for="search-input">חיפוש במאגר</label>
+        <span aria-hidden="true">⌕</span>
+        <input id="search-input" type="search" placeholder="פרק, מידה או מושג..." autocomplete="off">
+      </div>
+      <div id="search-status" class="sr-only" role="status" aria-live="polite"></div>
+      <nav id="doc-nav" class="doc-nav" aria-label="פרקי המאגר"></nav>
+      <div class="sidebar-foot">
+        <div class="progress-head"><span>התקדמות משימות</span><strong id="todo-small-count">—</strong></div>
+        <div class="progress-bar" role="progressbar" id="todo-progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="todo-progress-bar"></span></div>
+        <p>הסימונים נשמרים בדפדפן שלך בלבד.</p>
+      </div>
+    </aside>
+
+    <div class="main-layout">
+      <header class="topbar">
+        <div class="topbar-start">
+          <button class="icon-button mobile-menu" id="open-sidebar" aria-label="פתח ניווט">☰</button>
+          <div class="breadcrumb">👑 <span>דרך המלך</span><span class="separator">/</span><strong id="breadcrumb-label">מבוא</strong></div>
+        </div>
+        <div class="topbar-actions">
+          <button class="toolbar-button" id="todo-top" type="button" aria-haspopup="dialog" aria-controls="todo-modal">☑ <span>משימות</span></button>
+          <button class="toolbar-button" id="version-top" type="button" aria-haspopup="dialog" aria-controls="version-modal">🏷️ <span>0.0.1</span></button>
+          <button class="icon-button" id="font-toggle" type="button" aria-label="הגדל או הקטן טקסט" title="גודל טקסט">א+</button>
+          <button class="icon-button" id="theme-toggle" type="button" aria-label="החלף מצב תצוגה" title="מצב בהיר או כהה">☀</button>
+          <button class="toolbar-button about-button" id="about-top" type="button" aria-haspopup="dialog" aria-controls="about-modal">ℹ <span>אודות</span></button>
+        </div>
+      </header>
+
+      <main id="reader" tabindex="-1">
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-glow" aria-hidden="true"></div>
+          <div class="hero-inner">
+            <div class="eyebrow"><span class="spark">✦</span> מפת לימוד עצמאית · מהדורה 6 בתכנון</div>
+            <div class="hero-crown" aria-hidden="true">♛</div>
+            <h1 id="hero-title">למלוך על עצמך.<br><em>להוסיף טוב לעולם.</em></h1>
+            <p>מאגר ליקוטים, פירושים, נימוקים ומידות למעשה, בהשראת ״לחיות כמו מלך״. דרך שבה גבולות ועשייה מיטיבה בונים בחירה, אחריות ומשמעות.</p>
+            <div class="hero-actions">
+              <a class="primary-cta" href="#/sor">🛡️ סור מרע</a>
+              <a class="secondary-cta" href="#/good">🌱 עשה טוב</a>
+              <button class="secondary-cta" type="button" id="about-hero">על הפרויקט</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="metrics" aria-label="נתוני המאגר">
+          <div class="metric"><span>📖 פרקי מקור</span><strong>15</strong><small>מיפוי רעיוני</small></div>
+          <div class="metric"><span>🧭 שערי לימוד</span><strong>6</strong><small>מסלול התפתחות</small></div>
+          <div class="metric"><span>💎 ליקוטים</span><strong>18</strong><small>חדשים ועצמאיים</small></div>
+          <div class="metric"><span>📋 מפת דרכים</span><strong>120</strong><small>משימות פיתוח</small></div>
+        </section>
+
+        <div class="content-head">
+          <div><span class="section-label">ספריית הלימוד</span><h2 id="article-title">מבוא</h2><p id="article-subtitle">בחר מסמך מתוך התפריט כדי לקרוא ולהעמיק.</p></div>
+          <div class="article-actions">
+            <button class="toolbar-button" id="copy-source" type="button">⧉ <span>העתק Markdown</span></button>
+            <button class="toolbar-button" id="print-page" type="button">⎙ <span>הדפס</span></button>
+          </div>
+        </div>
+
+        <article id="article-content" class="markdown-body" dir="rtl" aria-live="polite">
+          <p class="loading">טוען את המסמך...</p>
+        </article>
+        <footer class="main-footer">
+          <p>״סוּר מֵרָע וַעֲשֵׂה־טוֹב; בַּקֵּשׁ שָׁלוֹם וְרָדְפֵהוּ״ — תהילים ל״ד, ט״ו</p>
+          <div><span>© KingBalance · AnLoMinus</span><button type="button" id="footer-about">קרדיטים וזכויות</button></div>
+        </footer>
+      </main>
+    </div>
+  </div>
+
+  <div id="mobile-backdrop" class="mobile-backdrop" hidden></div>
+
+  <dialog id="version-modal" class="kb-dialog" aria-labelledby="version-modal-title">
+    <div class="dialog-top"><div><span class="section-label">ניהול שינויים</span><h2 id="version-modal-title">📜 יומן גרסאות</h2></div><button class="icon-button dialog-close" data-close="version-modal" aria-label="סגור">✕</button></div>
+    <div class="dialog-content markdown-body" id="version-content"></div>
+  </dialog>
+  <dialog id="todo-modal" class="kb-dialog large-dialog" aria-labelledby="todo-modal-title">
+    <div class="dialog-top"><div><span class="section-label">מפת פיתוח מתמשכת</span><h2 id="todo-modal-title">☑ 120 משימות</h2></div><button class="icon-button dialog-close" data-close="todo-modal" aria-label="סגור">✕</button></div>
+    <p class="dialog-hint">סימון כאן אישי ושמור בדפדפן. כדי לעדכן את המאגר לכל המשתמשים, ערכו את TODO.md בגיטהאב.</p>
+    <div class="dialog-content markdown-body" id="todo-content"></div>
+  </dialog>
+  <dialog id="about-modal" class="kb-dialog" aria-labelledby="about-modal-title">
+    <div class="dialog-top"><div><span class="section-label">פרויקט עצמאי</span><h2 id="about-modal-title">👑 אודות וקרדיטים</h2></div><button class="icon-button dialog-close" data-close="about-modal" aria-label="סגור">✕</button></div>
+    <div class="about-content">
+      <div class="about-seal">♛</div>
+      <h3>KingBalance · KB</h3>
+      <p>לימוד, ליקוט ואפיון עצמאי למידות טובות ולהתפתחות אישית, בהשראת הספר ״לחיות כמו מלך״ — מהדורה 5.</p>
+      <p class="notice">אינו מהדורה רשמית או עיבוד מורשה של הספר המקורי. זכויות חוברת המקור שמורות ל״לחיות כמו מלך״ — <a href="https://kingslife.org" target="_blank" rel="noopener noreferrer">kingslife.org</a>.</p>
+      <h4>יוזמה וקרדיטים</h4>
+      <p><strong>לאון יעקובוב · AnLoMinus / Cyber Shamanic</strong></p>
+      <div class="contact-links">
+        <a href="https://github.com/AnLoMinus" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/anlominus/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://www.facebook.com/AnlominusX" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://codepen.io/Anlominus" target="_blank" rel="noopener noreferrer">CodePen</a>
+        <a href="mailto:GlobalElite8200@gmail.com">✉ דוא״ל</a>
+        <a href="https://wa.me/972543285967" target="_blank" rel="noopener noreferrer">💬 054-328-5967</a>
+        <a href="https://wa.me/972535366687" target="_blank" rel="noopener noreferrer">💬 053-536-6687</a>
+      </div>
+      <p class="about-date">מהדורת מאגר 0.0.1 · 31.10.2026 · כ׳ בחשוון ה׳תשפ״ז</p>
+    </div>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="assets/app.js"></script>
+</body>
+</html>
