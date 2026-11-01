@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#091a31">
+  <meta name="description" content="44 קלפי KingBalance דו־צדדיים עם 12 סגנונות, פירוש פרד״ס ומנגנון קלף יומי.">
+  <title>44 קלפי דרך המלך · KingBalance 0.0.2</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/cards.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#deck-main">דלג לקלפים</a>
+  <header class="cards-topbar">
+    <a class="brand" href="index.html"><span class="brand-mark">♛</span><span><strong>KingBalance</strong><small>44 Wisdom Cards · KB</small></span></a>
+    <div class="cards-top-actions"><span class="cards-version">גרסה 0.0.2</span><a href="index.html" class="back-link">← חזרה למאגר</a></div>
+  </header>
+  <main id="deck-main" class="cards-app">
+    <section class="cards-hero">
+      <div class="eyebrow">✦ שער הליקוטים והקלפים</div>
+      <h1>44 שערים של <em>בחירה ועשיית טוב.</em></h1>
+      <p>כל קלף נושא צד של ״סור מרע״ וצד של ״עשה טוב״, לצד ביאור פרד״ס מקורי, תרגיל מעשי והפניה לפרק ולעמוד בחוברת.</p>
+      <div class="hero-stat"><span>44 זוגות</span><span>88 צדדים</span><span>12 מסגרות</span><span>קלף יומי אחד</span></div>
+    </section>
+
+    <div class="cards-controlbar">
+      <button id="daily-pick" class="cards-primary" type="button">☀️ הקלף של היום</button>
+      <button id="random-pick" class="cards-secondary" type="button">🎲 שלוף קלף אחר</button>
+      <label class="cards-search-label">חיפוש <input type="search" id="card-search" placeholder="חפש מידה, מילה או מקור..."></label>
+      <label class="cards-select-label">נושא <select id="category-filter"><option value="">כל הנושאים</option></select></label>
+    </div>
+
+    <div class="cards-layout">
+      <section class="featured-panel" aria-labelledby="selected-heading">
+        <div class="selected-header">
+          <div><span class="section-label">הקלף הנבחר</span><h2 id="selected-heading">טוען קלפים...</h2><p id="selected-source"></p></div>
+          <div class="deck-nav-buttons"><button id="prev-card" title="הקודם" aria-label="קלף קודם">‹</button><button id="next-card" title="הבא" aria-label="קלף הבא">›</button></div>
+        </div>
+
+        <div class="featured-card-wrap">
+          <button class="card-flip-button" id="card-flip" aria-pressed="false" aria-label="הפוך בין חזית וגב הקלף">
+            <div id="card-preview" class="card-preview frame-style-1">
+              <div class="card-rotator">
+                <div class="card-surface card-front">
+                  <span class="card-topline">KINGBALANCE · KB</span>
+                  <div class="card-ornament">✦</div>
+                  <span class="card-number" id="front-id">01 / 44</span>
+                  <span class="card-face-badge">סוּר מֵרָע</span>
+                  <h3 id="front-title">מבט מכוון</h3>
+                  <p class="card-quote" id="front-quote"></p>
+                  <span class="card-bottomline" id="front-source"></span>
+                </div>
+                <div class="card-surface card-back">
+                  <span class="card-topline">KINGBALANCE · KB</span>
+                  <span class="card-face-badge good-badge">עֲשֵׂה טוֹב</span>
+                  <h3 id="back-title"></h3>
+                  <p class="card-quote" id="back-quote"></p>
+                  <div class="card-brief-pardes" id="back-pardes"></div>
+                  <span class="card-bottomline" id="back-source"></span>
+                </div>
+              </div>
+            </div>
+          </button>
+          <p class="flip-hint">לחץ על הקלף כדי לראות את הצד השני <span aria-hidden="true">↻</span></p>
+          <div class="selected-actions">
+            <button class="cards-secondary" id="flip-cta">↻ הפוך קלף</button>
+            <button class="cards-secondary" id="copy-card">⧉ העתק ליקוט</button>
+            <button class="cards-secondary" id="share-card">↗ העתק משפט לשיתוף</button>
+          </div>
+        </div>
+        <div class="pardes-detail">
+          <h3>📖 ביאור פרד״ס — חידוש פרשני</h3>
+          <div class="pardes-grid" id="pardes-grid"></div>
+          <div class="practice-box"><strong>🛠️ מידה למעשה</strong><p id="practice-text"></p></div>
+          <p class="origin-note">הביאורים הם יצירה עצמאית ואינם מוצגים כדברי המחבר או כציטוטים מן הספר.</p>
+        </div>
+      </section>
+
+      <aside class="styles-panel" aria-labelledby="styles-heading">
+        <div class="styles-head"><span class="section-label">מעבדת מסגרות</span><h2 id="styles-heading">🎨 12 סגנונות</h2><p>בחר מסגרת. ניתן להמשיך לדייק צבעים וטיפוגרפיה בגרסאות הבאות.</p></div>
+        <div id="style-gallery" class="style-gallery"></div>
+      </aside>
+    </div>
+
+    <section class="print-panel">
+      <div><span class="section-label">מהמסך אל הדפוס</span><h2>🖨️ קלפים מוכנים להדפסה</h2><p>החבילות כוללות את 44 הקלפים, חזית וגב לסירוגין. קובץ TCG כולל שוליים של 3 מ״מ מכל צד ומידות דף של 66×97 מ״מ.</p></div>
+      <div class="print-links">
+        <a href="print/KingBalance-A6-Duplex.pdf" download>הורד PDF · A6</a>
+        <a href="print/KingBalance-TCG-60x91-3mm-bleed.pdf" download>הורד PDF · TCG + Bleed</a>
+      </div>
+    </section>
+
+    <section class="collection-section">
+      <div class="collection-head"><div><span class="section-label">כל הקלפים</span><h2>📚 ספריית 44 הליקוטים</h2></div><span id="results-count">44 קלפים</span></div>
+      <div class="cards-grid" id="cards-grid"></div>
+    </section>
+    <footer class="cards-footer">© KingBalance · יוזמה עצמאית עבור Cyber Shamanic / AnLoMinus · <a href="ATTRIBUTION.md">זכויות ומקורות</a> · ״סוּר מֵרָע וַעֲשֵׂה־טוֹב״</footer>
+  </main>
+  <div id="cards-toast" class="toast" aria-live="polite" role="status"></div>
+  <script type="module" src="assets/cards.js"></script>
+</body>
+</html>

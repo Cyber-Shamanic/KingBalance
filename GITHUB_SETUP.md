@@ -17,7 +17,7 @@
 
     git init
     git add .
-    git commit -m "chore: initialize KingBalance 0.0.1"
+    git commit -m "feat: publish KingBalance 0.0.2 wisdom cards"
     git branch -M main
     git remote add origin https://github.com/USERNAME/KingBalance.git
     git push -u origin main

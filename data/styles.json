@@ -1,0 +1,17 @@
+{
+  "version": "0.0.2",
+  "styles": [
+    {"id": 1, "name": "כתר הזהב", "en": "Royal Gold", "bg": "#111C2F", "ink": "#FFF6DD", "accent": "#EBC46B", "secondary": "#806036", "motif": "crown"},
+    {"id": 2, "name": "ספיר המלכות", "en": "Sapphire Court", "bg": "#091C43", "ink": "#F0F7FF", "accent": "#89B8FF", "secondary": "#345D9C", "motif": "diamond"},
+    {"id": 3, "name": "גן האזמרגד", "en": "Emerald Garden", "bg": "#102F2A", "ink": "#F4FFF6", "accent": "#87DDAE", "secondary": "#356E58", "motif": "leaf"},
+    {"id": 4, "name": "להבת אודם", "en": "Ruby Flame", "bg": "#390D25", "ink": "#FFF4F1", "accent": "#FFA47D", "secondary": "#9B3754", "motif": "flame"},
+    {"id": 5, "name": "קלף הקדמונים", "en": "Ancient Parchment", "bg": "#E8D7B5", "ink": "#31261E", "accent": "#8D603D", "secondary": "#C4A77E", "motif": "scroll"},
+    {"id": 6, "name": "שמֵי הלילה", "en": "Midnight Stars", "bg": "#080D28", "ink": "#F5F0FF", "accent": "#A8A7FA", "secondary": "#50569A", "motif": "stars"},
+    {"id": 7, "name": "שמש הנחושת", "en": "Copper Dawn", "bg": "#40251A", "ink": "#FFF6E9", "accent": "#F2B178", "secondary": "#A76D42", "motif": "sun"},
+    {"id": 8, "name": "כסף נקי", "en": "Silver Minimal", "bg": "#E8EDF1", "ink": "#1B2937", "accent": "#55778A", "secondary": "#9BABB6", "motif": "minimal"},
+    {"id": 9, "name": "אור הסגול", "en": "Violet Halo", "bg": "#27153A", "ink": "#FFF5FF", "accent": "#D8A5F1", "secondary": "#75498B", "motif": "halo"},
+    {"id": 10, "name": "גלי התכלת", "en": "Ocean Waves", "bg": "#073547", "ink": "#E9FAFF", "accent": "#67CADA", "secondary": "#26788F", "motif": "wave"},
+    {"id": 11, "name": "מקדש האור", "en": "Temple Light", "bg": "#3A3028", "ink": "#FFF9E9", "accent": "#E2C08B", "secondary": "#8A6D4C", "motif": "columns"},
+    {"id": 12, "name": "סייבר שמאניק", "en": "Cyber Shamanic", "bg": "#081D27", "ink": "#E9FFFF", "accent": "#6DFFE3", "secondary": "#2C7A77", "motif": "circuit"}
+  ]
+}
